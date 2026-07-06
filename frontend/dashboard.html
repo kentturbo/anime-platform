@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Anime Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="images/elf-logo.svg" alt="Elf Mascot" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <span id="userEmail" class="user-email"></span>
+                <button id="logoutBtn" class="btn-secondary">Sign Out</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div id="noSubscriptionView" class="subscription-prompt" style="display: none;">
+            <div class="prompt-card glass">
+                <div class="prompt-mascot">
+                    <img src="images/elf-sad.svg" alt="Sad Elf" class="mascot-sad">
+                </div>
+                <h2 class="prompt-title">Subscription Required</h2>
+                <p class="prompt-message">
+                    Our elf friend is sad because you haven't subscribed yet! 
+                    Get unlimited access to all anime content now.
+                </p>
+                <a href="subscribe.html" class="btn-primary btn-large">Subscribe Now</a>
+            </div>
+        </div>
+
+        <div id="contentView" style="display: none;">
+            <div class="content-header">
+                <div>
+                    <h1 class="page-title">Your Library</h1>
+                    <p class="page-subtitle">Browse and stream your favorite anime</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box glass">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search anime..." class="search-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="subscription-info glass">
+                <div class="sub-info-content">
+                    <div class="sub-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="sub-status">Premium Active</div>
+                        <div class="sub-expires">Expires: <span id="expiresDate"></span></div>
+                    </div>
+                </div>
+                <a href="subscribe.html" class="btn-secondary">Manage</a>
+            </div>
+
+            <div id="fileExplorer" class="file-explorer">
+                <div class="files-grid" id="filesGrid">
+                    <div class="loading-state">
+                        <div class="loader-large"></div>
+                        <p>Loading content...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="videoModal" class="modal" style="display: none;">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content glass">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <video id="videoPlayer" class="video-player" controls></video>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

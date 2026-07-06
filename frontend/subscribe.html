@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe - Anime Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/subscribe.css">
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="images/elf-logo.svg" alt="Elf Mascot" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="btn-secondary">Back to Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="subscribe-container">
+        <div class="subscribe-header">
+            <h1 class="page-title">Choose Your Plan</h1>
+            <p class="page-subtitle">Unlock unlimited access to premium anime content</p>
+        </div>
+
+        <div class="plans-grid">
+            <div class="plan-card glass">
+                <div class="plan-badge">Monthly</div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Premium Monthly</h3>
+                    <div class="plan-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-value">9.99</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Unlimited streaming
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        HD quality playback
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Download for offline
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Community access
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Cancel anytime
+                    </li>
+                </ul>
+                <button class="btn-primary btn-full subscribe-btn" data-plan="monthly" data-amount="9.99">
+                    Subscribe Now
+                </button>
+            </div>
+
+            <div class="plan-card glass featured">
+                <div class="plan-badge">Best Value</div>
+                <div class="plan-header">
+                    <h3 class="plan-name">Premium Yearly</h3>
+                    <div class="plan-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-value">99.99</span>
+                        <span class="price-period">/year</span>
+                    </div>
+                    <div class="plan-savings">Save $20 per year</div>
+                </div>
+                <ul class="plan-features">
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Everything in Monthly
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Priority support
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Early access to new content
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Exclusive community events
+                    </li>
+                    <li class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        17% discount
+                    </li>
+                </ul>
+                <button class="btn-primary btn-full subscribe-btn" data-plan="yearly" data-amount="99.99">
+                    Subscribe Now
+                </button>
+            </div>
+        </div>
+
+        <div class="payment-info glass">
+            <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="16" x2="12" y2="12"/>
+                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+            </div>
+            <div>
+                <h4 class="info-title">Secure Payment Processing</h4>
+                <p class="info-text">All transactions are encrypted and secure. Cancel or upgrade anytime.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="paymentModal" class="modal" style="display: none;">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content glass">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="payment-content">
+                <h2 class="payment-title">Payment Integration Pending</h2>
+                <p class="payment-subtitle">This is a placeholder for payment gateway integration</p>
+                <div class="payment-details">
+                    <div class="detail-row">
+                        <span>Plan:</span>
+                        <strong id="selectedPlan"></strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Amount:</span>
+                        <strong id="selectedAmount"></strong>
+                    </div>
+                </div>
+                <button class="btn-primary btn-full" id="mockPaymentBtn">
+                    Complete Payment (Mock)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/subscribe.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Anime Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card glass">
+            <div class="auth-mascot">
+                <img src="images/elf-mascot.svg" alt="Elf Mascot" class="mascot-auth">
+            </div>
+            
+            <div id="step1" class="auth-step active">
+                <h1 class="auth-title">Create Account</h1>
+                <p class="auth-subtitle">Start your anime journey today</p>
+                
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Minimum 8 characters" required minlength="8">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-input" placeholder="Re-enter password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full" id="registerBtn">
+                        <span id="registerBtnText">Create Account</span>
+                        <span id="registerBtnLoader" class="loader" style="display: none;"></span>
+                    </button>
+                    
+                    <div id="registerError" class="error-message" style="display: none;"></div>
+                </form>
+                
+                <div class="auth-footer">
+                    Already have an account? <a href="login.html" class="auth-link">Sign In</a>
+                </div>
+            </div>
+
+            <div id="step2" class="auth-step">
+                <h1 class="auth-title">Verify Your Email</h1>
+                <p class="auth-subtitle">Enter the 6-digit code sent to <span id="userEmail"></span></p>
+                
+                <form id="verifyForm" class="auth-form">
+                    <div class="code-inputs">
+                        <input type="text" maxlength="1" class="code-input" data-index="0">
+                        <input type="text" maxlength="1" class="code-input" data-index="1">
+                        <input type="text" maxlength="1" class="code-input" data-index="2">
+                        <input type="text" maxlength="1" class="code-input" data-index="3">
+                        <input type="text" maxlength="1" class="code-input" data-index="4">
+                        <input type="text" maxlength="1" class="code-input" data-index="5">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full" id="verifyBtn">
+                        <span id="verifyBtnText">Verify Email</span>
+                        <span id="verifyBtnLoader" class="loader" style="display: none;"></span>
+                    </button>
+                    
+                    <div id="verifyError" class="error-message" style="display: none;"></div>
+                </form>
+                
+                <div class="auth-footer">
+                    Didn't receive code? <a href="#" id="resendCode" class="auth-link">Resend</a>
+                </div>
+            </div>
+
+            <div id="step3" class="auth-step">
+                <h1 class="auth-title">Join Our Community</h1>
+                <p class="auth-subtitle">Subscribe to our Telegram channel to activate your account</p>
+                
+                <div class="telegram-card glass">
+                    <div class="telegram-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.18-2.73 5.16-4.66c.223-.198-.054-.308-.345-.11l-6.378 4.018-2.75-.918c-.595-.187-.608-.595.125-.881l10.75-4.14c.495-.18.93.12.77.88z"/>
+                        </svg>
+                    </div>
+                    <h3 class="telegram-title">Required: Channel Subscription</h3>
+                    <p class="telegram-description">Get exclusive updates, participate in discussions, and access premium content</p>
+                    <a href="#" id="telegramChannelLink" class="btn-primary btn-full" target="_blank">
+                        Open Telegram Channel
+                    </a>
+                </div>
+                
+                <form id="telegramForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="telegramId" class="form-label">Your Telegram User ID</label>
+                        <input type="text" id="telegramId" class="form-input" placeholder="123456789" required>
+                        <small class="form-hint">Find your ID by messaging @userinfobot on Telegram</small>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full" id="linkTelegramBtn">
+                        <span id="linkTelegramBtnText">Complete Registration</span>
+                        <span id="linkTelegramBtnLoader" class="loader" style="display: none;"></span>
+                    </button>
+                    
+                    <div id="telegramError" class="error-message" style="display: none;"></div>
+                </form>
+            </div>
+
+            <div id="step4" class="auth-step">
+                <div class="success-animation">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="38" stroke="#0066CC" stroke-width="4" opacity="0.2"/>
+                        <path d="M25 40L35 50L55 30" stroke="#0066CC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="checkmark"/>
+                    </svg>
+                </div>
+                <h1 class="auth-title">Welcome Aboard!</h1>
+                <p class="auth-subtitle">Your account has been created successfully</p>
+                <a href="dashboard.html" class="btn-primary btn-full">Go to Dashboard</a>
+            </div>
+        </div>
+        
+        <div class="auth-steps glass">
+            <div class="step-item active" data-step="1">
+                <div class="step-number">1</div>
+                <span class="step-label">Account</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step="2">
+                <div class="step-number">2</div>
+                <span class="step-label">Verify</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step="3">
+                <div class="step-number">3</div>
+                <span class="step-label">Telegram</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" data-step="4">
+                <div class="step-number">4</div>
+                <span class="step-label">Done</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

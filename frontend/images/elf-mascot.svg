@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4C4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFDAB9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clothesGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <ellipse cx="150" cy="350" rx="80" ry="20" fill="#000000" opacity="0.1"/>
+  
+  <ellipse cx="150" cy="200" rx="60" ry="80" fill="url(#bodyGradient)"/>
+  
+  <rect x="120" y="200" width="60" height="120" rx="30" fill="url(#clothesGradient)"/>
+  
+  <ellipse cx="90" cy="240" rx="15" ry="30" fill="url(#bodyGradient)"/>
+  <ellipse cx="210" cy="240" rx="15" ry="30" fill="url(#bodyGradient)"/>
+  
+  <rect x="135" y="310" width="30" height="60" rx="15" fill="url(#bodyGradient)"/>
+  
+  <ellipse cx="150" cy="360" rx="20" ry="12" fill="#8B4513"/>
+  
+  <circle cx="150" cy="120" r="60" fill="url(#bodyGradient)"/>
+  
+  <circle cx="130" cy="115" r="12" fill="#2C3E50"/>
+  <circle cx="170" cy="115" r="12" fill="#2C3E50"/>
+  
+  <circle cx="133" cy="112" r="5" fill="#FFFFFF"/>
+  <circle cx="173" cy="112" r="5" fill="#FFFFFF"/>
+  
+  <path d="M 130 135 Q 150 145 170 135" stroke="#E74C3C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <ellipse cx="110" cy="125" rx="10" ry="15" fill="#FFB6C1"/>
+  <ellipse cx="190" cy="125" rx="10" ry="15" fill="#FFB6C1"/>
+  
+  <path d="M 90 80 Q 70 50 50 65 Q 60 90 85 100 Z" fill="url(#bodyGradient)"/>
+  <path d="M 210 80 Q 230 50 250 65 Q 240 90 215 100 Z" fill="url(#bodyGradient)"/>
+  
+  <ellipse cx="150" cy="70" rx="50" ry="35" fill="#8B4513"/>
+  
+  <circle cx="150" cy="200" r="6" fill="#FFD700"/>
+  <circle cx="150" cy="220" r="6" fill="#FFD700"/>
+  <circle cx="150" cy="240" r="6" fill="#FFD700"/>
+  
+  <path d="M 150 50 L 145 30 L 150 35 L 155 30 Z" fill="#FFD700"/>
+  
+  <path d="M 130 95 Q 135 90 140 95" stroke="#8B4513" stroke-width="2" fill="none"/>
+  <path d="M 170 95 Q 165 90 160 95" stroke="#8B4513" stroke-width="2" fill="none"/>
+</svg>
